@@ -1,0 +1,94 @@
+﻿<UserControl x:Class="WorkTracker.ProjectCommercialDataControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+    <Border Background="White"
+            BorderBrush="{StaticResource FieldBlockLeftBorderBrush}"
+            BorderThickness="5 0 0 0"
+            Padding="15 0 0 0"
+            Margin="0 10 0 0">
+        <StackPanel>
+
+            <!-- Header Label-->
+            <TextBlock Text="Abrechnung" 
+                       Margin="0 0 0 20"
+                       FontSize="20"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Billing Unit -->
+                <TextBlock Grid.Column="0" Style="{StaticResource RegularFormLabel}"
+                   Text="Abrechnungseinheit" />
+
+                <ComboBox Grid.Column="1" Style="{StaticResource RegularFormComboBox}"
+                 x:Name="BillingUnitCombo">
+                    <ComboBoxItem>Stunden</ComboBoxItem>
+                    <ComboBoxItem>Tage</ComboBoxItem>
+                </ComboBox>
+
+                <!-- Unit Price -->
+                <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource RegularFormLabel}"
+                   Text="Einheitspreis" />
+
+                <TextBox Grid.Column="1" Grid.Row="1" 
+                 x:Name="UnitPriceText"
+                 Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Currency -->
+                <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource RegularFormLabel}"
+                   Text="Währung" />
+
+                <ComboBox Grid.Column="1" Grid.Row="2" Style="{StaticResource RegularFormComboBox}"
+                 x:Name="CurrencyCombo">
+                    <ComboBoxItem>EUR</ComboBoxItem>
+                    <ComboBoxItem>SEK</ComboBoxItem>
+                </ComboBox>
+
+                <!-- Minimum Billing Amount -->
+                <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource RegularFormLabel}"
+                   Text="Mindestverrechnung"/>
+
+                <TextBox Grid.Column="1" Grid.Row="3" 
+                x:Name="MinimalBillingText"
+                Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Round after x Minutes -->
+                <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource RegularFormLabel}"
+                   Text="Nach x Minuten aufrunden"/>
+
+                <TextBox Grid.Column="1" Grid.Row="4" 
+                x:Name="RoundUpAfterXMinutesText"
+                Text="1"
+                Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Round after x Minutes -->
+                <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource RegularFormLabel}"
+                   Text="Aufrunden auf x Einheiten"/>
+
+                <TextBox Grid.Column="1" Grid.Row="5" 
+                x:Name="RoundUpValueText"
+                Style="{StaticResource RegularFormTextBox}"/>
+
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>

@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="WorkTracker.CustomerAddressControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+    <Border Background="Transparent"
+            BorderBrush="{StaticResource FieldBlockLeftBorderBrush}"
+            BorderThickness="5 0 0 0"
+            Padding="15 0 0 0"
+            Margin="0 10 0 0">
+        
+        <StackPanel>
+
+            <!-- Header Label-->
+            <TextBlock Text="Allgemein" 
+                       Margin="0 0 0 20"
+                       FontSize="20"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Customer Name -->
+                <TextBlock Grid.Column="0" Style="{StaticResource RegularFormLabel}"
+                   Text="Name" />
+
+                <TextBox Grid.Column="1" 
+                 x:Name="CustomerNameText"
+                 Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Customer Address -->
+                <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource RegularFormLabel}"
+                   Text="Straße" />
+
+                <TextBox Grid.Column="1" Grid.Row="1" 
+                 x:Name="CustomerStreetText"
+                 Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Customer Post code -->
+                <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource RegularFormLabel}"
+                   Text="Postleitzahl" />
+
+                <TextBox Grid.Column="1" Grid.Row="2" 
+                 x:Name="CustomerPostCodeText"
+                 Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Customer Address -->
+                <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource RegularFormLabel}"
+                   Text="Ort" />
+
+                <TextBox Grid.Column="1" Grid.Row="3" 
+                 x:Name="CustomerCityText"
+                 Style="{StaticResource RegularFormTextBox}"/>
+
+                <!-- Customer Country -->
+                <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource RegularFormLabel}"
+                   Text="Land" />
+
+                <ComboBox Grid.Column="1" Grid.Row="4" Style="{StaticResource RegularFormComboBox}"
+                 x:Name="CustomerCountryCombo">
+                    <ComboBoxItem>Deutschland</ComboBoxItem>
+                    <ComboBoxItem>Finnland</ComboBoxItem>
+                    <ComboBoxItem>Italien</ComboBoxItem>
+                    <ComboBoxItem>Österreich</ComboBoxItem>
+                    <ComboBoxItem>Schweden</ComboBoxItem>
+                </ComboBox>
+
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>
