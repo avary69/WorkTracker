@@ -16,7 +16,7 @@
     <!-- Textbox style -->
     <Style x:Key="RegularFormTextBox" TargetType="TextBox">
         <Setter Property="Margin" Value="15 7 0 7" />
-        <Setter Property="Padding" Value="5 4 0 0" />
+        <Setter Property="Padding" Value="5 0 0 0" />
         <Setter Property="MinWidth" Value="200" />
         <Setter Property="FontSize" Value="14" />
     </Style>
@@ -24,6 +24,7 @@
     <Style x:Key="RegularFormComboBox" TargetType="ComboBox">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="Margin" Value="15 7 0 7" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
     </Style>
 
     <Style x:Key="RegularFormButton" TargetType="Button">

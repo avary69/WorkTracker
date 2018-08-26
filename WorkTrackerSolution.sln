@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTracker", "WorkTracker\WorkTracker.csproj", "{AF0D25DB-DCDD-4396-9C0E-4F03FB4ADC56}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkTrackerLibrary", "WorkTrackerLibrary\WorkTrackerLibrary.csproj", "{C05E74B5-0B37-46EF-8F04-821C95714A6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AF0D25DB-DCDD-4396-9C0E-4F03FB4ADC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF0D25DB-DCDD-4396-9C0E-4F03FB4ADC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF0D25DB-DCDD-4396-9C0E-4F03FB4ADC56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C05E74B5-0B37-46EF-8F04-821C95714A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C05E74B5-0B37-46EF-8F04-821C95714A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C05E74B5-0B37-46EF-8F04-821C95714A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C05E74B5-0B37-46EF-8F04-821C95714A6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

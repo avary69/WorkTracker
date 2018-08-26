@@ -23,6 +23,9 @@ namespace WorkTracker
         public MainWindow()
         {
             InitializeComponent();
+
+            MenuFrame.Content = new MenuControl();
+            MainFrame.Content = new RegisterTimerPage();
         }
     }
 }

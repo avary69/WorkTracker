@@ -57,6 +57,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\MenuControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\RegisterTimeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Controls\Project\ProjectCommercialDataControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -85,6 +93,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\MenuControl.xaml.cs">
+      <DependentUpon>MenuControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RegisterTimeControl.xaml.cs">
+      <DependentUpon>RegisterTimeControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Project\ProjectCommercialDataControl.xaml.cs">
       <DependentUpon>ProjectCommercialDataControl.xaml</DependentUpon>
     </Compile>
@@ -104,6 +118,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\RegisterTimerPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\ProjectPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -122,6 +140,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\RegisterTimerPage.xaml.cs">
+      <DependentUpon>RegisterTimerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ProjectPage.xaml.cs">
       <DependentUpon>ProjectPage.xaml</DependentUpon>
     </Compile>
@@ -155,6 +176,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\clock_svg.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WorkTrackerLibrary\WorkTrackerLibrary.csproj">
+      <Project>{c05e74b5-0b37-46ef-8f04-821c95714a6b}</Project>
+      <Name>WorkTrackerLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

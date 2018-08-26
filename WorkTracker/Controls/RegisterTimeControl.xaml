@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="WorkTracker.RegisterTimeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WorkTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="400">
+    <Border Background="White"
+            BorderBrush="{StaticResource FieldBlockLeftBorderBrush}"
+            BorderThickness="5 0 0 0"
+            Padding="15 0 0 0"
+            Margin="0 10 0 0">
+        <StackPanel>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="0*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Customer Name -->
+                <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource RegularFormLabel}"
+                   Text="Kunde" />
+
+                <ComboBox Grid.Column="1" Grid.Row="0" Style="{StaticResource RegularFormComboBox}"
+                          x:Name="CustomerName">
+                    <ComboBoxItem>Customer 1</ComboBoxItem>
+                    <ComboBoxItem>Customer 2</ComboBoxItem>
+                    <ComboBoxItem>Customer 3</ComboBoxItem>
+                </ComboBox>
+
+                <!-- Project Name -->
+                <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource RegularFormLabel}"
+                   Text="Projekt" />
+
+                <ComboBox Grid.Column="1" Grid.Row="1" Style="{StaticResource RegularFormComboBox}"
+                 x:Name="ProjectName">
+                    <ComboBoxItem>Project 1</ComboBoxItem>
+                    <ComboBoxItem>Project 2</ComboBoxItem>
+                    <ComboBoxItem>Project 3</ComboBoxItem>
+                </ComboBox>
+
+                <!-- Project Task -->
+                <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource RegularFormLabel}"
+                   Text="Aufgabe" />
+
+                <ComboBox Grid.Column="1" Grid.Row="2" Style="{StaticResource RegularFormComboBox}"
+                 x:Name="CurrencyCombo">
+                    <ComboBoxItem>Projektaufgabe 1</ComboBoxItem>
+                    <ComboBoxItem>Projektaufgabe 2</ComboBoxItem>
+                </ComboBox>
+
+                <!-- Date Selector -->
+                <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource RegularFormLabel}"
+                   Text="Datum"/>
+
+                <DatePicker Grid.Column="1" Grid.Row="3" 
+                            x:Name="Date"
+                            Margin="15 7 0 7"
+                            FirstDayOfWeek="Monday"
+                            VerticalContentAlignment="Center"
+                            FontSize="14"/>
+
+                <!-- Work Time -->
+                <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource RegularFormLabel}"
+                   Text="Stunden"/>
+
+                <TextBox Grid.Column="1" Grid.Row="4" 
+                         x:Name="WorkTimeText"
+                         Style="{StaticResource RegularFormTextBox}"/>
+                
+                <!-- Save Button -->
+                <Button Grid.Column="1" Grid.Row="5" 
+                        HorizontalAlignment="Right"
+                        Padding="10 5 10 5"
+                        Margin="0 10 0 0">
+                    <TextBlock Text="Speichern" />
+                </Button>
+
+            </Grid>
+        </StackPanel>
+    </Border>
+</UserControl>
